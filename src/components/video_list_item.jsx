@@ -2,6 +2,13 @@ import React from 'react'
 
 import '../scss/video_list_item.scss'
 
+function addCommas(num) {
+    return String(num).split('').reverse().reduce((prev, curr, index) => {
+        if(index % 3 === 0) return prev + ',' + curr
+        return prev + curr
+    }).split('').reverse().join('')
+}
+
 const VideoListItem = ({
     video,
     onVideoSelect
@@ -12,6 +19,7 @@ const VideoListItem = ({
 
     const thumbnail = video.snippet.thumbnails.medium.url
     const title = video.snippet.title
+    const channel = video.snippet.channelTitle
 
     return (
         <li
@@ -19,7 +27,11 @@ const VideoListItem = ({
             onClick={selectVideo}
         >
             <img className="thumbnail" src={thumbnail} alt={title}/>
-            <p className="title">{title}</p>
+            <div className="details">
+                <p className="title">{title}</p>
+                <p className="channel">{channel}</p>
+                <p className="views">{ addCommas(Math.round(Math.random() * 3000000 + 5000)) } views</p>
+            </div>
         </li>
     )
 }

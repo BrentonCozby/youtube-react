@@ -13,7 +13,8 @@ const VideoDetail = ({ video }) => {
                 <iframe src={embedUrl}></iframe>
             </div>
             <div className="details">
-                <span className="title">{video.snippet.title}</span>
+                <p className="title">{video.snippet.title}</p>
+                <p className="channel">{video.snippet.channelTitle}</p>
                 <p className="description">{video.snippet.description}</p>
             </div>
         </div>
