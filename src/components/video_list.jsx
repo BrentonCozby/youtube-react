@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import VideoListItem from './video_list_item'
 
 import '../scss/video_list.scss'
@@ -23,8 +24,8 @@ const VideoList = ({
 }
 
 VideoList.proptypes = {
-    videos: React.PropTypes.array,
-    onVideoSelect: React.PropTypes.func
+    videos: PropTypes.array,
+    onVideoSelect: PropTypes.func
 }
 
 export default VideoList

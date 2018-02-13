@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import '../scss/video_detail.scss'
 
@@ -22,7 +23,7 @@ const VideoDetail = ({ video }) => {
 }
 
 VideoDetail.propTypes = {
-    video: React.PropTypes.object
+    video: PropTypes.object
 }
 
 export default VideoDetail

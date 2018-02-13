@@ -13,7 +13,6 @@ const API_KEY = 'AIzaSyD0tOaD9-PXFa1eDFGHA5ijCvaONSU3Z30'
 function getVideos(term) {
     const result = new Promise((resolve, reject) => {
         YTSearch({key: API_KEY, term: term}, videos => {
-            console.log(videos)
             resolve(videos)
         })
     })

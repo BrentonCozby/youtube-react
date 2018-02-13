@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import searchIcon from '../../public/search.png'
 
 import '../scss/search_bar.scss'
@@ -10,7 +11,7 @@ class SearchBar extends Component {
     }
 
     static propTypes = {
-        videoSearch: React.PropTypes.func
+        videoSearch: PropTypes.func
     }
 
     onInputChange = (e) => {
