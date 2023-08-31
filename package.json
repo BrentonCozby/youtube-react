@@ -6,7 +6,9 @@
   "repository": "git@github.com:BrentonCozby/youtube-react.git",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +36,8 @@
     "react-router": "^4.2.0",
     "redux": "^3.7.2",
     "webpack": "^3.11.0",
-    "youtube-api-search": "^0.0.5"
-  }
+    "youtube-api-search": "^0.0.5",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
